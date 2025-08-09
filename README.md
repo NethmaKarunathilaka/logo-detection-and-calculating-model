@@ -169,10 +169,14 @@ We thank the authors of [Transalnet](https://github.com/LJOVO/TranSalNet), [DBNE
 
 ## Citation
 ```bibtex
-@article{hosseini2024brand,
-  title={Brand Visibility in Packaging: A Deep Learning Approach for Logo Detection, Saliency-Map Prediction, and Logo Placement Analysis},
+@article{hosseini2025brand,
+  title={Brand visibility in packaging: A deep learning approach for logo detection, saliency-map prediction, and logo placement analysis},
   author={Hosseini, Alireza and Hooshanfar, Kiana and Omrani, Pouria and Toosi, Reza and Toosi, Ramin and Ebrahimian, Zahra and Akhaee, Mohammad Ali},
-  journal={arXiv preprint arXiv:2403.02336},
-  year={2024}
+  journal={Discover Applied Sciences},
+  volume={7},
+  number={6},
+  pages={537},
+  year={2025},
+  publisher={Springer}
 }
 ```
