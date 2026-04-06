@@ -24,15 +24,21 @@ def main():
                         , help="Path to YOLOv8 trained model")
     parser.add_argument("--image", type=str, default='test_images/test.jpg', help="Path to input image")
     parser.add_argument("--save-result", action="store_true", help="Save the result image with bounding boxes")
+    parser.add_argument("--conf", type=float, default=0.25, help="Confidence threshold (0.0-1.0). Lower detects more logos")
+    parser.add_argument("--iou", type=float, default=0.5, help="NMS IoU threshold (0.0-1.0). Lower keeps more overlapping boxes")
+    parser.add_argument("--max-det", type=int, default=300, help="Maximum number of detections per image")
 
     args = parser.parse_args()
 
     model_path = args.model
     image_path = args.image
     save_result = args.save_result
+    conf = args.conf
+    iou = args.iou
+    max_det = args.max_det
 
     # Perform logo detection and get bounding boxes
-    bboxes = yolov8_logo_detection(model_path, image_path, save_result)
+    bboxes = yolov8_logo_detection(model_path, image_path, save_result, conf=conf, iou=iou, max_det=max_det)
     print("bounding-boxes list :")
     print(bboxes)
 
