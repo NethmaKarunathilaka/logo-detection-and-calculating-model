@@ -15,7 +15,7 @@ def compute_blur_score(crop: np.ndarray, threshold: float = 200.0) -> float:
     gray = cv2.cvtColor(crop, cv2.COLOR_BGR2GRAY)
     variance = cv2.Laplacian(gray, cv2.CV_64F).var()
     return round(float(np.clip(variance / threshold, 0.0, 1.0)), 4)
-
+ 
 
 def compute_blur_scores_for_bboxes(
     image: np.ndarray,
